@@ -19,18 +19,35 @@ public class Main {
 	public static void fillLists()
 	{
 		Characters cha = new Characters();
-		cha.setName("All the Ninja Turtles");
-		cha.setName("Shredder");
-		cha.setName("Splinter");
-		cha.setName("Joe Shmo");
-		cha.setName("Tree #721");
-		cha.setName("Megameme");
-		cha.setName("Not so Superman");
-		cha.setName("A Tree Frog");
-		cha.setName("Romeo");
-		cha.setName("Doomguy");
-		cha.setName("Mr Incredible");
-		cha.setName("Rango the Chameleon");
+		cha.setName("All the Ninja Turtles"); //1
+		cha.setName("Shredder");			  //2
+		cha.setName("Splinter");			  //3
+		cha.setName("Joe Shmo");			  //4
+		cha.setName("Tree #721");			  //5
+		cha.setName("Megameme");			  //6
+		cha.setName("Not so Superman");		  //7
+		cha.setName("A Tree Frog");			  //8
+		cha.setName("Romeo");				  //9
+		cha.setName("Doomguy");				  //10
+		cha.setName("Mr Incredible");		  //11
+		cha.setName("Rango the Chameleon");	  //12
+		
+		
+		Activity act = new Activity();
+		act.setName("");
+		act.setName("");
+		act.setName("");
+		act.setName("");
+		act.setName("");
+		act.setName("");
+		
+		Setting setting = new Setting();
+		setting.setName("Elevator ride to the 34th floor, but each floor button is lit.");
+		setting.setName("Woke up skydiving with no memory of how you got here.");
+		setting.setName("Revature zoom call, but before the trainer is online.");
+		setting.setName("At brian's house");
+		setting.setName("Currently on the actual titanic in today's year.");
+		setting.setName("Literally in a git hub.");
 	}
 	
 }
