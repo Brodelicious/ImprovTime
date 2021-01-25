@@ -15,7 +15,7 @@ public class Main {
 	
 	public static void run()
 	{
-		System.out.println("I have begun!");
+		System.out.println("Scene!");
 		fillLists();
 		Generator gen = new Generator();
 		gen.generate(charsList, setList, actList);
