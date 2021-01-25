@@ -1,6 +1,6 @@
 package com.Revature.ImprovTime.Beans;
 
-class Setting
+public class Setting
 {
 	private Integer id;
 	private String name;

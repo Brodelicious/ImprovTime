@@ -1,6 +1,6 @@
 package com.Revature.ImprovTime.Beans;
 
-class Activity
+public class Activity
 {
 	private Integer id;
 	private String name;

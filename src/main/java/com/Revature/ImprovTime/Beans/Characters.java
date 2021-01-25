@@ -1,11 +1,11 @@
 package com.Revature.ImprovTime.Beans;
 
-class Character
+public class Characters
 {
 	private Integer id;
 	private String name;
 	
-	public Character()
+	public Characters()
 	{
 		id = -1;
 		name = "";
@@ -49,7 +49,7 @@ class Character
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Character other = (Character) obj;
+		Characters other = (Characters) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
