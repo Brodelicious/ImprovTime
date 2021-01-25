@@ -19,6 +19,18 @@ public class Main {
 	public static void fillLists()
 	{
 		Characters cha = new Characters();
+		cha.setName("All the Ninja Turtles");
+		cha.setName("Shredder");
+		cha.setName("Splinter");
+		cha.setName("Joe Shmo");
+		cha.setName("Tree #721");
+		cha.setName("Megameme");
+		cha.setName("Not so Superman");
+		cha.setName("A Tree Frog");
+		cha.setName("Romeo");
+		cha.setName("Doomguy");
+		cha.setName("Mr Incredible");
+		cha.setName("Rango the Chameleon");
 	}
 	
 }
