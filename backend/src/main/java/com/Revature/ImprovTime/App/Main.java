@@ -18,36 +18,55 @@ public class Main {
 	
 	public static void fillLists()
 	{
+		addCharacter("All the Ninja Turtles"); //1
+		addCharacter("Shredder");			  //2
+		addCharacter("Splinter");			  //3
+		addCharacter("Joe Shmo");			  //4
+		addCharacter("Tree #721");			  //5
+		addCharacter("Megameme");			  //6
+		addCharacter("Not so Superman");		  //7
+		addCharacter("A Tree Frog");			  //8
+		addCharacter("Romeo");				  //9
+		addCharacter("Doomguy");				  //10
+		addCharacter("Mr Incredible");		  //11
+		addCharacter("Rango the Chameleon");	  //12
+		
+		
+		
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		
+		addSetting("Elevator ride to the 34th floor, but each floor button is lit.");
+		addSetting("Woke up skydiving with no memory of how you got here.");
+		addSetting("Revature zoom call, but before the trainer is online.");
+		addSetting("At brian's house");
+		addSetting("Currently on the actual titanic in today's year.");
+		addSetting("Literally in a git hub.");
+	}
+	
+	private static void addCharacter(String name)
+	{
 		Characters cha = new Characters();
-		cha.setName("All the Ninja Turtles"); //1
-		cha.setName("Shredder");			  //2
-		cha.setName("Splinter");			  //3
-		cha.setName("Joe Shmo");			  //4
-		cha.setName("Tree #721");			  //5
-		cha.setName("Megameme");			  //6
-		cha.setName("Not so Superman");		  //7
-		cha.setName("A Tree Frog");			  //8
-		cha.setName("Romeo");				  //9
-		cha.setName("Doomguy");				  //10
-		cha.setName("Mr Incredible");		  //11
-		cha.setName("Rango the Chameleon");	  //12
-		
-		
+		cha.setName(name);
+		charsList.add(cha);
+	}
+	
+	private static void addSetting(String name)
+	{
 		Activity act = new Activity();
-		act.setName("");
-		act.setName("");
-		act.setName("");
-		act.setName("");
-		act.setName("");
-		act.setName("");
-		
+		act.setName(name);
+		actList.add(act);
+	}
+	
+	private static void addActivity(String name)
+	{
 		Setting setting = new Setting();
-		setting.setName("Elevator ride to the 34th floor, but each floor button is lit.");
-		setting.setName("Woke up skydiving with no memory of how you got here.");
-		setting.setName("Revature zoom call, but before the trainer is online.");
-		setting.setName("At brian's house");
-		setting.setName("Currently on the actual titanic in today's year.");
-		setting.setName("Literally in a git hub.");
+		setting.setName(name);
+		setList.add(setting);
 	}
 	
 	public static void activitylist() {
