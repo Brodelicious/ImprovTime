@@ -1,19 +1,24 @@
 package com.Revature.ImprovTime.App;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.Revature.ImprovTime.Beans.Activity;
 import com.Revature.ImprovTime.Beans.Characters;
+import com.Revature.ImprovTime.Beans.Generator;
 import com.Revature.ImprovTime.Beans.Setting;
 
 public class Main {
 
-	private static List<Activity> actList;
-	private static List<Characters> charsList;
-	private static List<Setting> setList;
+	private static List<Activity> actList = null;
+	private static List<Characters> charsList = null;
+	private static List<Setting> setList = null;
 	
 	public static void run()
 	{
 		System.out.println("I have begun!");
+		fillLists();
+		Generator gen = new Generator();
+		gen.generate(charsList, setList, actList);
 	}
 	
 	public static void fillLists()
@@ -39,16 +44,20 @@ public class Main {
 		addActivity("riding a tandem bike");
 		addActivity("shopping at walmart");
 		
-		addSetting("Elevator ride to the 34th floor, but each floor button is lit.");
-		addSetting("Woke up skydiving with no memory of how you got here.");
-		addSetting("Revature zoom call, but before the trainer is online.");
-		addSetting("At brian's house");
-		addSetting("Currently on the actual titanic in today's year.");
-		addSetting("Literally in a git hub.");
+		addSetting("on an elevator ride to the 34th floor, but each floor button is lit.");
+		addSetting("they woke up skydiving with no memory of how you got here.");
+		addSetting("on a revature zoom call, but before the trainer is online.");
+		addSetting("at brian's house");
+		addSetting("currently on the actual titanic in today's year.");
+		addSetting("literally in a git hub.");
 	}
 	
 	private static void addCharacter(String name)
 	{
+		if(charsList == null)
+		{
+			charsList = new ArrayList<Characters>();
+		}
 		Characters cha = new Characters();
 		cha.setName(name);
 		charsList.add(cha);
@@ -56,16 +65,26 @@ public class Main {
 	
 	private static void addSetting(String name)
 	{
-		Activity act = new Activity();
-		act.setName(name);
-		actList.add(act);
+		if(setList == null)
+		{
+			setList = new ArrayList<Setting>();
+		}
+		
+		Setting setting = new Setting();
+		setting.setName(name);
+		setList.add(setting);
 	}
 	
 	private static void addActivity(String name)
 	{
-		Setting setting = new Setting();
-		setting.setName(name);
-		setList.add(setting);
+		if(actList == null)
+		{
+			actList = new ArrayList<Activity>();
+		}
+		
+		Activity act = new Activity();
+		act.setName(name);
+		actList.add(act);
 	}
 	
 }
