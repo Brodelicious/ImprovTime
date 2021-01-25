@@ -33,12 +33,11 @@ public class Main {
 		
 		
 		
-		addActivity("");
-		addActivity("");
-		addActivity("");
-		addActivity("");
-		addActivity("");
-		addActivity("");
+		addActivity("mugging a shark");
+		addActivity("milking a cow");
+		addActivity("eating dinner with batchmates");
+		addActivity("riding a tandem bike");
+		addActivity("shopping at walmart");
 		
 		addSetting("Elevator ride to the 34th floor, but each floor button is lit.");
 		addSetting("Woke up skydiving with no memory of how you got here.");
@@ -67,15 +66,6 @@ public class Main {
 		Setting setting = new Setting();
 		setting.setName(name);
 		setList.add(setting);
-	}
-	
-	public static void activitylist() {
-		Activity ac = new Activity();
-		ac.setName("mugging a shark");
-		ac.setName("milking a cow");
-		ac.setName("eating dinner with batchmates");
-		ac.setName("riding a tandem bike");
-		ac.setName("shopping at walmart");
 	}
 	
 }
