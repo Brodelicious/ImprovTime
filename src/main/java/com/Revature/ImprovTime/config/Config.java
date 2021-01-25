@@ -18,9 +18,6 @@ public class Config {
 				.setType(EmbeddedDatabaseType.H2).addScript("schema.sql").build();
 	}
 
-	@Bean
-	public PlatformTransactionManager transactionManager(DataSource dataSource) {
-		return new DataSourceTransactionManager(dataSource); 
-	}
+	
 	
 }
