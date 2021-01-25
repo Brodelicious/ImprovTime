@@ -18,19 +18,64 @@ public class Main {
 	
 	public static void fillLists()
 	{
+		addCharacter("All the Ninja Turtles"); //1
+		addCharacter("Shredder");			  //2
+		addCharacter("Splinter");			  //3
+		addCharacter("Joe Shmo");			  //4
+		addCharacter("Tree #721");			  //5
+		addCharacter("Megameme");			  //6
+		addCharacter("Not so Superman");		  //7
+		addCharacter("A Tree Frog");			  //8
+		addCharacter("Romeo");				  //9
+		addCharacter("Doomguy");				  //10
+		addCharacter("Mr Incredible");		  //11
+		addCharacter("Rango the Chameleon");	  //12
+		
+		
+		
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		addActivity("");
+		
+		addSetting("Elevator ride to the 34th floor, but each floor button is lit.");
+		addSetting("Woke up skydiving with no memory of how you got here.");
+		addSetting("Revature zoom call, but before the trainer is online.");
+		addSetting("At brian's house");
+		addSetting("Currently on the actual titanic in today's year.");
+		addSetting("Literally in a git hub.");
+	}
+	
+	private static void addCharacter(String name)
+	{
 		Characters cha = new Characters();
-		cha.setName("All the Ninja Turtles");
-		cha.setName("Shredder");
-		cha.setName("Splinter");
-		cha.setName("Joe Shmo");
-		cha.setName("Tree #721");
-		cha.setName("Megameme");
-		cha.setName("Not so Superman");
-		cha.setName("A Tree Frog");
-		cha.setName("Romeo");
-		cha.setName("Doomguy");
-		cha.setName("Mr Incredible");
-		cha.setName("Rango the Chameleon");
+		cha.setName(name);
+		charsList.add(cha);
+	}
+	
+	private static void addSetting(String name)
+	{
+		Activity act = new Activity();
+		act.setName(name);
+		actList.add(act);
+	}
+	
+	private static void addActivity(String name)
+	{
+		Setting setting = new Setting();
+		setting.setName(name);
+		setList.add(setting);
+	}
+	
+	public static void activitylist() {
+		Activity ac = new Activity();
+		ac.setName("mugging a shark");
+		ac.setName("milking a cow");
+		ac.setName("eating dinner with batchmates");
+		ac.setName("riding a tandem bike");
+		ac.setName("shopping at walmart");
 	}
 	
 }
