@@ -69,4 +69,13 @@ public class Main {
 		setList.add(setting);
 	}
 	
+	public static void activitylist() {
+		Activity ac = new Activity();
+		ac.setName("mugging a shark");
+		ac.setName("milking a cow");
+		ac.setName("eating dinner with batchmates");
+		ac.setName("riding a tandem bike");
+		ac.setName("shopping at walmart");
+	}
+	
 }
