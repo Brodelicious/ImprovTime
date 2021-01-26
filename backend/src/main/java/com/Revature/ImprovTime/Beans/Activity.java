@@ -1,8 +1,15 @@
 package com.Revature.ImprovTime.Beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "improv_activity")
 public class Activity
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	@Column
 	private String name;
 	
 	public Activity()
