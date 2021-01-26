@@ -35,7 +35,7 @@ public class SettingsService {
 		return setDAO.save(set);
 	}
 	
-	public void editSetting(Setting set)
+	public void updateSetting(Setting set)
 	{
 		if(setDAO.getOne(set.getId()) != null)
 		{
