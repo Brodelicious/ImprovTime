@@ -22,7 +22,7 @@ public class SettingsService {
 	
 	public Setting getSettingByID(Integer id)
 	{
-		return setDAO.getOne(id);
+		return setDAO.findById(id).get();
 	}
 	
 	public List<Setting> getAllSettings()

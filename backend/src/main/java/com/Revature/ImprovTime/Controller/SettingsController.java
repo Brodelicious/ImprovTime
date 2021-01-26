@@ -28,9 +28,10 @@ public class SettingsController {
 		this.setServ = setServ;
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Setting> getSettingById(@PathVariable Integer id)
 	{
+
 		Setting set = setServ.getSettingByID(id);
 		
 		if (set != null)
