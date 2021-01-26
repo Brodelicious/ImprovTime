@@ -3,6 +3,7 @@ package com.Revature.ImprovTime.Controller;
 import java.util.List;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +12,14 @@ import com.Revature.ImprovTime.Services.CharacterService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping(path = "/characters")
+@RequestMapping("/characters")
 public class CharacterController {
+	
 	private CharacterService charactersServ;
+	
+	@Autowired
 	public CharacterController(CharacterService cs) {
-		charactersServ = cs;
+		this.charactersServ = cs;
 	}
 	
 	@GetMapping
