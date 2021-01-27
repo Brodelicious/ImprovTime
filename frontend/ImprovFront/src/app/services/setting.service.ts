@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http2ServerRequest } from 'http2';
-import { Observable } from 'rxjs';
 import {Setting} from '../models/setting';
 import {UrlService} from './url.service';
 
@@ -12,7 +10,7 @@ export class SettingService {
     url: string;
 
     constructor(private http: HttpClient, private urlServ: UrlService) { 
-        this.url = this.urlServ + "/settings";
+        this.url = this.urlServ.getURL() + "/settings";
     }
 
     getSettingById(id: number){
