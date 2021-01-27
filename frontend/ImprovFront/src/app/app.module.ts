@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InsertComponent } from './insert/insert.component';
 import { DisplayComponent } from './display/display.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FormsModule } from '@angular/forms'
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

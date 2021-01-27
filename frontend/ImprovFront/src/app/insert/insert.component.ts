@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsertComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  name: string;
+  type: string;
+
+
+  constructor() {
+    this.id = -1;
+    this.name = "";
+    this.type = "";
+  }
 
   ngOnInit(): void {
+  }
+
+  submit()
+  {
+    console.log("button pushed " + this.name + " " + this.type);
   }
 
 }
