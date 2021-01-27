@@ -11,7 +11,7 @@ export class CharacterService {
   url: string;
 
   constructor(private http: HttpClient, private urlServ: UrlService) {
-    this.url = this.urlServ + "/characters";
+    this.url = this.urlServ.getURL() + "/characters";
   }
 
 

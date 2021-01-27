@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http2ServerRequest } from 'http2';
-import { Observable } from 'rxjs';
 import { Activity } from '../models/activity';
 import { UrlService } from './url.service';
 
@@ -13,7 +11,7 @@ export class ActivityService {
   url: string;
 
   constructor(private http: HttpClient, private urlServ: UrlService) {
-    this.url = this.urlServ + "/activities";
+    this.url = this.urlServ.getURL() + "/activities";
   }
 
 
