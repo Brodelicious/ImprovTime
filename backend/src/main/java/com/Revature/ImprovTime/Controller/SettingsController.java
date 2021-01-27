@@ -59,10 +59,10 @@ public class SettingsController {
 		setServ.updateSetting(set);
 	}
 	
-	@DeleteMapping
-	public void deleteSetting(@RequestBody Setting set)
+	@DeleteMapping("/{id}")
+	public void deleteSetting(@PathVariable Integer id)
 	{
-		setServ.deleteSetting(set);
+		setServ.deleteSetting(setServ.getSettingByID(id));
 	}
 	
 }

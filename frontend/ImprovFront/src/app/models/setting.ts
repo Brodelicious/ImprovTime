@@ -1,7 +1,7 @@
 export class Setting {
 
     id: number;
-    name: String;
+    name: string;
 
     constructor()
     {

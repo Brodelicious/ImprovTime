@@ -1,6 +1,6 @@
 export class Character {
     id: number;
-    name: String;
+    name: string;
 
     constructor()
     {
