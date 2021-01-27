@@ -1,1 +1,12 @@
 <p>insert works!</p>
+<label>Please enter a name</label>
+<br>
+<input [(ngModel)]='name'>
+<br>
+<mat-radio-group [(ngModel)] = "type">
+    <mat-radio-button value = "Setting">Setting</mat-radio-button>
+    <mat-radio-button value = "Activity">Activity</mat-radio-button>
+    <mat-radio-button value = "Character">Character</mat-radio-button>
+</mat-radio-group>
+
+<button (click)="submit()">Submit</button>
