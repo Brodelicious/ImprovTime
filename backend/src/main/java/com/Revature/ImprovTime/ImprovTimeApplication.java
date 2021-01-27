@@ -9,8 +9,8 @@ import com.Revature.ImprovTime.App.Main;
 public class ImprovTimeApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(ImprovTimeApplication.class, args);
-		Main.run();
+		SpringApplication.run(ImprovTimeApplication.class, args);
+		//Main.run();
 	}
 
 }

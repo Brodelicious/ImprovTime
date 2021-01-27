@@ -1,8 +1,15 @@
 package com.Revature.ImprovTime.Beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "improv_character")
 public class Characters
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	@Column
 	private String name;
 	
 	public Characters()
