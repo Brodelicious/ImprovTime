@@ -13,7 +13,7 @@ export class ActivityService {
   url: string;
 
   constructor(private http: HttpClient, private urlServ: UrlService) {
-    this.url = this.urlServ + "/activity";
+    this.url = this.urlServ + "/activities";
   }
 
 
