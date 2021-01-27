@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "ImprovFront"
+  "defaultProject": "ImprovFront",
+  "cli": {
+    "analytics": "6b6e63d5-9d0b-414f-976c-1c253a1b48a9"
+  }
 }
