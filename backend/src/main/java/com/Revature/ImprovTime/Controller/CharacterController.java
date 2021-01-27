@@ -53,10 +53,10 @@ public class CharacterController {
 		return ResponseEntity.ok().build();
 	}
 	
-	@DeleteMapping
-	public ResponseEntity<Void> deleteCharacters(@RequestBody Characters c){
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteCharacters(@PathVariable Integer id){
 		
-		charactersServ.deleteCharacters(c);
+		charactersServ.deleteCharacters(charactersServ.getById(id));
 		return ResponseEntity.ok().build();
 	}
 

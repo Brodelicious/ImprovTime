@@ -15,7 +15,7 @@ public class Config {
 	@Bean
 	public EmbeddedDatabase dataSource() {
 		return new EmbeddedDatabaseBuilder() 
-				.setType(EmbeddedDatabaseType.H2).addScript("schema.sql").build();
+				.setType(EmbeddedDatabaseType.H2).addScript("schema.sql").addScript("data.sql").build();
 	}
 
 	

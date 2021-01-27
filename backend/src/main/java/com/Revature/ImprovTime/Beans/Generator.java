@@ -6,7 +6,7 @@ public class Generator{
     public Generator(){
     }
 
-    public void generate(List<Characters> characters, List<Setting> settings, List<Activity> activities){
+    public String generate(List<Characters> characters, List<Setting> settings, List<Activity> activities){
         Characters char1 = new Characters();
         Characters char2 = new Characters();
         Setting setting = new Setting();
@@ -20,6 +20,6 @@ public class Generator{
         setting = settings.get((int)(Math.random()*(settings.size())));
         activity = activities.get((int)(Math.random()*(activities.size())));
 
-        System.out.println(char1.getName() + " and " + char2.getName() + " are " + activity.getName() + " while " + setting.getName());
+        return (char1.getName() + " and " + char2.getName() + " are " + activity.getName() + " while " + setting.getName());
     }
 }

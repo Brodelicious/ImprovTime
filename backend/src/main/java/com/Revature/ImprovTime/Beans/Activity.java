@@ -3,7 +3,7 @@ package com.Revature.ImprovTime.Beans;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "improv_activity")
+@Table(name = "activity")
 public class Activity
 {
 	@Id

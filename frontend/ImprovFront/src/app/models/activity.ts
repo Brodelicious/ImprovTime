@@ -1,7 +1,7 @@
 export class Activity {
     
     id: number;
-    name: String;
+    name: string;
 
     constructor()
     {
