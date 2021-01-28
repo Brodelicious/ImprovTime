@@ -18,7 +18,7 @@ import com.Revature.ImprovTime.Beans.Setting;
 import com.Revature.ImprovTime.Services.SettingsService;
 
 @RestController
-@RequestMapping("/setting")
+@RequestMapping("/settings")
 @CrossOrigin(origins="http://localhost:4200")
 public class SettingsController {
 
