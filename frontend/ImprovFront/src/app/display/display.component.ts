@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {async} from 'rxjs';
+import {GeneratorService} from '../services/generator.service';
 
 @Component({
   selector: 'app-display',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
+  scenario: string;
 
-  constructor() { }
+  constructor(private genServ: GeneratorService) { 
+      this.scenario = "Scene!";
+  }
 
   ngOnInit(): void {
+  }
+
+  async generate(){
+     this.genServ.getGeneratedString().subscribe(
+         resp => {
+             console.log(resp);
+             this.scenario = resp as string;
+         }
+     );
   }
 
 }
