@@ -11,15 +11,18 @@ import com.Revature.ImprovTime.Beans.Activity;
 import com.Revature.ImprovTime.Beans.Generator;
 import com.Revature.ImprovTime.Services.ActivityService;
 import com.Revature.ImprovTime.Services.CharacterService;
-import com.Revature.ImprovTime.Services.SettingsService;
+import com.Revature.ImprovTime.Services.SettingsService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
 @RequestMapping(path = "/generators")
+@CrossOrigin(origins="http://localhost:4200")
 public class GeneratorController {
 	
 	private ActivityService asev;
 	private CharacterService cserv;
 	private SettingsService sserv;
+	ObjectMapper om = new ObjectMapper();
 	
 	@Autowired
 	public GeneratorController(ActivityService as, CharacterService cs, SettingsService ss) {
@@ -32,6 +35,12 @@ public class GeneratorController {
 	public ResponseEntity<String> getScene(){
 		Generator gen = new Generator();
 		String str = gen.generate(cserv.getAll(), sserv.getAllSettings(), asev.getAll());
+		try{
+	    	str = om.writeValueAsString(str);
+		}
+		catch(Exception e){
+		    return ResponseEntity.badRequest().build();
+		}
 		return ResponseEntity.ok(str);
 	}
 	
