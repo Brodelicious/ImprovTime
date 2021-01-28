@@ -1,8 +1,19 @@
 .card{
-    background-color: aqua;
+    // background-color: aqua;
+    background-image: url("../../stagemic.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     justify-content: center;
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     margin-top: 15%;
+    opacity: .8;
+}
+.card-header{
+    background-color: antiquewhite;
+    opacity: .9;
+    text-align: center;
+
 }
