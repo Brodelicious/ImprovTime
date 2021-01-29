@@ -1,18 +1,30 @@
 
 
-<div class="card text-center" style="width: 25rem; height: 12rem;">
-    <div class="card-header">{{  this.message }}</div>
-    <div class="card-body">
-        <label>Please enter a name</label>
-        <br>
-        <input [(ngModel)]='name'>
-        <br>
-        <mat-radio-group [(ngModel)] = "type">
-            <mat-radio-button value = "Setting">Setting</mat-radio-button>
-            <mat-radio-button value = "Activity">Activity</mat-radio-button>
-            <mat-radio-button value = "Character">Character</mat-radio-button>
-        </mat-radio-group>
+<div class="card text-center" style="width: 25rem; height: 20rem;">
+   
+    <div class="card-body text-center">
+        <div style="background-color: aliceblue; opacity: .7;">{{  this.message }}</div>
+        <br><br><br><br><br>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter new character, activity, or setting" [(ngModel)]='name'>
+            <label for="floatingInput">Character, activity, or setting</label>
+          </div>
+    </div>
     
-        <button (click)="submit()">Submit</button>
+    <div >
+        <mat-radio-group [(ngModel)] = "type" style="color: aliceblue; opacity: .75;">
+
+            <mat-radio-button value = "Setting">Setting</mat-radio-button>
+
+            <mat-radio-button value = "Activity">Activity</mat-radio-button>
+  
+            <mat-radio-button value = "Character" aria-selected="true">Character</mat-radio-button>
+
+
+        </mat-radio-group>
+        &nbsp;
+        <button class="btn btn-light" (click)="submit()" >Submit</button>
     </div>
   </div>
+
+  
