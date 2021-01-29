@@ -1,8 +1,15 @@
 .card{
-    background-color: rgb(231, 144, 220);
+    /* background-color: rgb(231, 144, 220); */
+    background-image: url("../../addChar.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     justify-content: center;
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     margin-top: 15%;
+}
+.mat-radio-group{
+    opacity: .85;
 }

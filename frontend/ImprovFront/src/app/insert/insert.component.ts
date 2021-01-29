@@ -63,6 +63,7 @@ export class InsertComponent implements OnInit {
       await this.actServ.addActivity(toSend).toPromise();
       this.message = "Added Successfully!";
     }
+    this.name = "";
   }
 
 }
